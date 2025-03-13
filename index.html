@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Víctor Monares | Arquitecto</title>
+    <meta name="description" content="Equipo conformado por Víctor Monares, arquitecto especializado en proyectos innovadores y soluciones de iluminación, regularizaciones, ampliaciones">
+    <!-- CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="iProVM_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#home">iProVM.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cotizador">Cotizador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Galería</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light theme-toggle">
+                    <i class="bi bi-sun-fill"></i> <!-- Icono de sol para el tema claro -->
+                    <i class="bi bi-moon-fill" style="display: none;"></i> <!-- Icono de luna para el tema oscuro -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <iframe class="hero-video lazy" data-src="https://www.youtube.com/embed/zB5mFtXg7PY?autoplay=1&loop=1&playlist=zB5mFtXg7PY&mute=1"
+            title="programando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        <div class="container hero-content">
+            <h1 class="hero-title">ARQUITECTURA</h1>
+            <p class="hero-subtitle">Ideas<br>Profesionales <br>Innovacion<br>Proyeccion</p>
+            <div class="social-icons mb-4">
+                <a href="https://twitter.com/crisoull" target="_blank" class="text-white">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/benjamin-gonzalez-6986462a3/" target="_blank" class="text-white">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/BGM707" target="_blank" class="text-white">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <button class="btn btn-custom" onclick="location.href='#contact'">Trabajemos juntos</button>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Galería de Proyectos</h2>
+            <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="project1.webp" class="d-block w-100" alt="Proyecto 1">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="project2.webp" class="d-block w-100" alt="Proyecto 2">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="project3.webp" class="d-block w-100" alt="Proyecto 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="project4.webp" class="d-block w-100" alt="Proyecto 4">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="pro5.png" class="d-block w-100" alt="Proyecto 5">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="pro6.png" class="d-block w-100" alt="Proyecto 6">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="pro7.png" class="d-block w-100" alt="Proyecto 7">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="pro8.png" class="d-block w-100" alt="Proyecto 8">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="project9.png" class="d-block w-100" alt="Proyecto 9">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="pro10.png" class="d-block w-100" alt="Proyecto 10">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="pro11.png" class="d-block w-100" alt="Proyecto 11">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Renderizacion 3D</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 hover-card">
+                        <iframe width="100%" height="305" data-src="https://www.youtube.com/embed/zB5mFtXg7PY?autoplay=1&loop=1&playlist=zB5mFtXg7PY&mute=1"
+                            title="3D Arquicad" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3D casa hogar</h5>
+                            <p class="card-text">Proyecto a pedido casa hogar</p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary" title="Regularización">Municipal</span>
+                                <span class="badge bg-secondary" title="Plano a Creación del Cliente">Negociable</span>
+                                <span class="badge bg-info" title="Subdivisiones">Perimetral</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 hover-card">
+                        <iframe width="100%" height="305" data-src="https://www.youtube.com/embed/zB5mFtXg7PY?autoplay=1&loop=1&playlist=zB5mFtXg7PY&mute=1"
+                            title="3D Arquicad" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                        <div class="card-body">
+                            <h5 class="card-title">Elevacion Iglesia</h5>
+                            <p class="card-text">Regularizacion </p>
+                            <div class="d-flex gap-2">
+                                <span class="badge bg-primary" title="Regularización">Municipal</span>
+                                <span class="badge bg-secondary" title="Plano a Creación del Cliente">Negociable</span>
+                                <span class="badge bg-info" title="Subdivisiones">Perimetral</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cotizador" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Calcula tu Proyecto</h2>
+            <p class="text-center mb-4">Selecciona las opciones que necesitas y obtén un presupuesto instantáneo aproximado a tus necesidades.</p>
+            <form id="quotation-form">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="regularizacion" class="form-label">
+                                <i class="bi bi-house-door text-primary"></i> Regularización de Viviendas (Ley del Mono)
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-regularizacion">
+                                <label class="form-check-label" for="accept-regularizacion">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="subdivision" class="form-label">
+                                <i class="bi bi-geo-alt text-primary"></i> Subdivisión de Terrenos y Loteos
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-subdivision">
+                                <label class="form-check-label" for="accept-subdivision">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="informes" class="form-label">
+                                <i class="bi bi-file-earmark-text text-primary"></i> Informes Previos y Factibilidades
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-informes">
+                                <label class="form-check-label" for="accept-informes">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="patentes" class="form-label">
+                                <i class="bi bi-shop text-primary"></i> Regularización de Patentes Comerciales
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-patentes">
+                                <label class="form-check-label" for="accept-patentes">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="modelado" class="form-label">
+                                <i class="bi bi-vector-pen text-primary"></i> Diseño y Modelado 3D
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-modelado">
+                                <label class="form-check-label" for="accept-modelado">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="permisos" class="form-label">
+                                <i class="bi bi-check-circle text-primary"></i> Tramitación de Permisos de Edificación
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-permisos">
+                                <label class="form-check-label" for="accept-permisos">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="planos" class="form-label">
+                                <i class="bi bi-file-earmark-pdf text-primary"></i> Planos Express para Construcciones Simples
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-planos">
+                                <label class="form-check-label" for="accept-planos">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="instalaciones" class="form-label">
+                                <i class="bi bi-water text-primary"></i> Regularización de Instalaciones Sanitarias y Agua Potable
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-instalaciones">
+                                <label class="form-check-label" for="accept-instalaciones">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="ito" class="form-label">
+                                <i class="bi bi-clipboard-check text-primary"></i> Inspección Técnica de Obras (ITO)
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-ito">
+                                <label class="form-check-label" for="accept-ito">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="tiny" class="form-label">
+                                <i class="bi bi-house text-primary"></i> Construcción de Tiny Houses
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-tiny">
+                                <label class="form-check-label" for="accept-tiny">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="espacios" class="form-label">
+                                <i class="bi bi-rulers text-primary"></i> Diseño y Consultoría para Espacios Pequeños
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-espacios">
+                                <label class="form-check-label" for="accept-espacios">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="sostenible" class="form-label">
+                                <i class="bi bi-tree text-primary"></i> Consultoría en Construcción Sostenible
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-sostenible">
+                                <label class="form-check-label" for="accept-sostenible">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="service-card">
+                            <label for="reformas" class="form-label">
+                                <i class="bi bi-tools text-primary"></i> Reformas Rápidas o Ampliaciones Pequeñas
+                            </label>
+                            <div class="form-check mt-2">
+                                <input class="form-check-input" type="checkbox" id="accept-reformas">
+                                <label class="form-check-label" for="accept-reformas">Necesito este servicio</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <h4>Total:</h4>
+                    <p><strong>Costo:</strong> $<span id="total-cost">0</span></p>
+                    <p><strong>Tiempo:</strong> <span id="total-time">0</span> días</p>
+                    <button class="btn btn-custom mt-3" onclick="showModal()">Solicitar Reunión</button>
+                    <div class="mt-3">
+                        <button class="btn btn-custom" onclick="exportToPDF()">Exportar presupuesto a PDF</button>
+                        <button class="btn btn-custom" onclick="exportToExcel()">Exportar presupuesto a Excel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Acerca de Mí</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <img src="iProVM_logo_futuristic.png" alt="Profile" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h3 class="mb-4">¿Quiénes Somos?</h3>
+                    <p class="lead"> Víctor Monares, arquitecto especializado en proyectos innovadores y soluciones de iluminación. Su pasión es crear espacios funcionales y estéticos que mejoren la calidad de vida de las personas.</p>
+                    <div class="mt-4">
+                        <h4 class="mb-3">Habilidades</h4>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-primary" title="Diseño Arquitectónico">Diseño Arquitectónico</span>
+                            <span class="badge bg-warning" title="Iluminación">Iluminación</span>
+                            <span class="badge bg-success" title="Regularización de Viviendas">Regularización de Viviendas</span>
+                            <span class="badge bg-info" title="Subdivisión de Terrenos">Subdivisión de Terrenos</span>
+                            <span class="badge bg-danger" title="Consultoría en Construcción">Consultoría en Construcción</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Servicios</h2>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-house-door text-primary" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Diseño Arquitectónico</h5>
+                            <p class="card-text">Diseño de espacios funcionales y estéticos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-lightbulb text-primary" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Iluminación</h5>
+                            <p class="card-text">Soluciones de iluminación para espacios interiores y exteriores.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <div class="card h-100 text-center">
+                        <i class="bi bi-geo-alt text-primary" style="font-size: 4rem;"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Regularización de Viviendas</h5>
+                            <p class="card-text">Trámites y permisos para regularizar viviendas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Testimonios</h2>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="card h-100 text-center">
+                                    <i class="bi bi-person-circle text-primary" style="font-size: 4rem;"></i>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Juan Pérez</h5>
+                                        <p class="card-text">"Excelente trabajo, muy profesional y dedicado a su labor."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 text-center">
+                                    <i class="bi bi-person-circle text-primary" style="font-size: 4rem;"></i>
+                                    <div class="card-body">
+                                        <h5 class="card-title">María González</h5>
+                                        <p class="card-text">"Muy contenta con el resultado final, superó mis expectativas."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card h-100 text-center">
+                                    <i class="bi bi-person-circle text-primary" style="font-size: 4rem;"></i>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pedro Sánchez</h5>
+                                        <p class="card-text">"Recomiendo a Víctor, es un profesional comprometido con su trabajo."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Opening Hours Section -->
+    <section id="opening-hours" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Horario de Atención</h2>
+            <div class="opening-hours-card">
+                <p><strong>Lunes - Viernes:</strong> 8:00 AM - 6:00 PM</p>
+                <p><strong>Sábado:</strong> Cerrado</p>
+                <p><strong>Domingo:</strong> 11:00 AM - 5:00PM</p>
+                <p>Agenda tu cotizacion personalizada con el boton WhatsApp o llena el Formulario🏠</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title" data-aos="fade-up">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMTDJBBb_b5BA4vZNOLWuV0tw8f1jWQw98kJrPEpwMtx_5OQ/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Noticias del Colegio de Arquitectos</h2>
+        <div class="iframe-container">
+            <iframe src="https://colegioarquitectos.com/noticias/" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+
+    
+    <footer class="bg-dark py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; iProVM.com <br> 2025 Víctor Monares. Arquitecto. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="quotationModal" tabindex="-1" aria-labelledby="quotationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="quotationModalLabel">Calculadora de Proyectos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeModalBtn"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="infoAlert" class="alert alert-info d-none" role="alert">
+                        <h3 id="infoTitle"></h3>
+                        <p id="infoDesc"></p>
+                        <p id="infoExamples"></p>
+                    </div>
+                    <div id="quotation-result" class="mt-4">
+                        <h3>Estimación Total:</h3>
+                        <p><strong>Costo:</strong> $<span id="estimated-cost">0</span></p>
+                        <p><strong>Tiempo Aproximado:</strong> <span id="estimated-time">0</span> días</p>
+                        <div class="mt-4">
+                            <h3>¿Qué sigue?</h3>
+                            <p>Para continuar con el proceso, por favor completa el siguiente formulario y me pondré en contacto contigo a la brevedad.</p>
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScMTDJBBb_b5BA4vZNOLWuV0tw8f1jWQw98kJrPEpwMtx_5OQ/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- jsPDF for exporting to PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <!-- xlsx for exporting to Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js" defer></script>
+
+    <a href="https://wa.me/+56957284268" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">¿Buscas un arquitecto? ¡Contáctame!</span>
+    </a>
+</body>
+</html>

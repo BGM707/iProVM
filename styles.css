@@ -1,0 +1,762 @@
+:root {
+    --primary-color: linear-gradient(135deg, #1d1513, #4a919d);
+    --secondary-color: linear-gradient(135deg, #b1bccb, #21436c);
+    --accent-color: linear-gradient(135deg, #feeceb, #2ae6006e);
+    --text-color: #eee5e5;
+    --font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body.dark-theme {
+    --primary-color: #000000; /* Negro */
+    --text-color: #ffffff; /* Blanco */
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 80px; /* Ajusta el margen inferior según la altura del footer */
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(91, 184, 194, 0.9);
+    color: var(--primary-color);
+    z-index: 9999;
+    font-family: var(--font-family);
+    text-align: center;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.loader-content {
+    max-width: 90%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.92);
+    text-align: center;
+}
+
+.loader p {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--primary-color);
+    animation: fadeText 2s infinite;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeText {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loader.hidden {
+    display: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: var(--primary-color) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    color: var(--text-color) !important;
+    position: relative;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    opacity: 0.3; /* Ajusta la opacidad como desees */
+    pointer-events: none; /* Desactiva la interacción con el video */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* Agregar un fondo oscuro para mejorar la legibilidad */
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad como desees */
+    z-index: -1; /* Asegúrate de que esté detrás del contenido */
+}
+
+/* Asegúrate de que el contenido sea legible sobre el video */
+.hero-title, .hero-subtitle {
+    color: var(--text-color);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Sombra para mejorar legibilidad */
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards; /* Animación más rápida */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease 0.2s forwards; /* Animación más rápida */
+}
+
+/* Card Styles */
+.card {
+    background: rgba(73, 211, 154, 0.8);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Button Styles */
+.btn-custom {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+    background: var(--color-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(119, 128, 214, 0.3);
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--accent-color);
+    bottom: -10px;
+    left: 25%;
+}
+
+/* Social Icons */
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 148, 254, 0.926);
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Contact Form */
+.contact-form .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente para mejor visibilidad */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+
+}
+
+.contact-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+    border: 1px solid var(--accent-color);
+
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px; /* Añade padding para que el contenido esté centrado */
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Asegura que no sea más alto que la ventana */
+    overflow-y: auto; /* Habilita el scroll vertical si es necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-content .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente para mejor visibilidad */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+.modal-content .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: none;
+    border: 1px solid var(--accent-color);
+}
+
+.modal-content .btn-custom {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    border: none;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Aumenta el tamaño de la fuente para mejor visibilidad */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    width: 100%; /* Asegura que el botón ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+.modal-content .btn-custom:hover {
+    background: #4fc1ff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 59, 48, 0.3);
+}
+
+#quotation-result h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#quotation-result p {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold; /* Hace que el texto sea más grueso */
+}
+
+.close-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+/* Scroll to Top Button Styles */
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px; /* Ajusta la posición para que no se solape con el footer */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    z-index: 1000; /* Asegúrate de que esté por encima del footer */
+}
+
+.scroll-to-top.show {
+    display: flex;
+}
+
+.scroll-to-top:hover {
+    background: #ff4fc4;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 59, 48, 0.3);
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme .navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.dark-theme .card {
+    background: rgba(246, 0, 0, 0.986);
+}
+
+.dark-theme .contact-form .form-control {
+    background: rgba(246, 241, 241, 0.945);
+    color: #e0e0e0;
+}
+
+.dark-theme .btn-custom {
+    background: #ff3b30;
+}
+
+/* Responsive Adjustments */
+@container (min-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content label {
+        font-size: 1rem;
+    }
+
+    .modal-content .form-control {
+        font-size: 1rem;
+    }
+
+    .modal-content .btn-custom {
+        font-size: 1rem;
+    }
+
+    #quotation-result h3 {
+        font-size: 1.2rem;
+    }
+
+    #quotation-result p {
+        font-size: 1rem;
+    }
+
+    .close-modal {
+        font-size: 1.5rem;
+    }
+}
+
+@container (min-width: 576px) {
+    .nav-link {
+        margin: 0.25rem 0;
+    }
+
+    .social-icons a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .modal-content label {
+        font-size: 0.9rem;
+    }
+
+    .modal-content .form-control {
+        font-size: 0.9rem;
+    }
+
+    .modal-content .btn-custom {
+        font-size: 0.9rem;
+    }
+
+    #quotation-result h3 {
+        font-size: 1rem;
+    }
+
+    #quotation-result p {
+        font-size: 0.9rem;
+    }
+
+    .close-modal {
+        font-size: 1.2rem;
+    }
+}
+
+@container (min-width: 480px) {
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 20px;
+        left: 20px;
+        font-size: 30px;
+    }
+
+    .whatsapp-tooltip {
+        display: none; /* Oculta el tooltip en dispositivos móviles */
+    }
+}
+
+/* Estilos para el botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 120px; /* Ajusta la posición para que no se solape con el footer */
+    left: 40px;
+    background: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000; /* Asegúrate de que esté por encima del footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    animation: pulse 2s infinite; /* Animación de pulso */
+}
+
+.whatsapp-float:hover {
+    background: #128C7E;
+    transform: scale(1.1);
+}
+
+/* Tooltip personalizado */
+.whatsapp-tooltip {
+    position: absolute;
+    left: 80px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 280px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: var(--font-family);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animación de pulso mejorada */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Footer Styles */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(151, 172, 200, 0.95);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0%, 100% 65%, 80% 100%, 50% 85%, 20% 100%, 0 75%); /* Forma de casa/techo */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+/* Scroll Timeline Animation */
+@scroll-timeline scroll-timeline {
+    source: auto;
+    orientation: block;
+    scroll-offsets: 0% 100%;
+}
+
+@keyframes scroll-animation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animated {
+    animation: scroll-animation 1s ease-out;
+    animation-timeline: scroll-timeline;
+}
+
+/* Form Check Styles */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input {
+    margin-right: 0.5rem;
+}
+
+.form-check-label {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .form-check {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-check-input {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Galería de Proyectos */
+#gallery .carousel-item .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery .carousel-item .col-md-4 {
+    flex: 0 0 33.3333%; /* Asegura que cada columna ocupe un tercio del ancho */
+    max-width: 33.3333%;
+    padding: 0 15px;
+}
+
+#gallery img {
+    width: 100%;
+    height: 300px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que las imágenes cubran el contenedor sin distorsión */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 1000px; /* Ajusta la altura como prefieras */
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none; /* Desactiva la interacción */
+    overflow: auto; /* Habilita el desplazamiento dentro del iframe */
+    -ms-overflow-style: none;  /* Para ocultar las barras de desplazamiento en IE */
+    scrollbar-width: none; /* Para ocultar las barras de desplazamiento en Firefox */
+}
+
+/* Opción para mostrar barras de desplazamiento solo cuando se pasa el mouse sobre el iframe */
+.iframe-container iframe:hover {
+    pointer-events: auto; /* Habilita la interacción solo cuando el mouse está sobre el iframe */
+}
+#opening-hours {
+    background-image: url('image.png'); 
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    pointer-events: none; /* Desactiva la interacción con la imagen */
+    user-select: none; /* Desactiva la selección de texto */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.669); /* Sombra para mejorar la legibilidad */
+
+}
+
+#about {
+    background-image: url('casa.webp'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda la sección */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    filter: blur(0.5px); /* Aplica un desenfoque leve */
+    pointer-events: none; /* Desactiva la interacción con la imagen */
+    user-select: none; /* Desactiva la selección de texto */
+    position: relative; /* Asegura que el contenido se posicione correctamente */
+    text-shadow: #000000 0px 0px 20px; /* Sombra para mejorar la legibilidad */
+}
+
+#about .container {
+    position: relative; /* Asegura que el contenido se posicione sobre la imagen */
+    z-index: 1; /* Coloca el contenido por encima de la imagen */
+}
